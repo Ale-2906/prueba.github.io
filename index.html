@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎉 Sorpresa de Cumpleaños 🎂</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Confeti -->
+  <div class="particles" id="particles"></div>
+
+  <!-- PANTALLA DE CARGA -->
+  <div class="loadingScreen centered" id="loadingScreen">
+    <div>
+
+    </div>
+    <div>
+      <h1>🎁 Cargando tu sorpresa de cumpleaños...</h1>
+      <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+      <div class="loader-percent" id="loaderPercent">0%</div>
+      <div class="loader-sub">No cierres, algo bonito está por aparecer ✨</div>
+    </div>
+  </div>
+
+  <!-- PANTALLA PRINCIPAL -->
+  <div class="mainScreen centered" id="mainScreen">
+    <div>
+      <div class="title">🎉 ¡FELIZ CUMPLEAÑOS! 🎉</div>
+      <div class="subtitle">Tu sorpresa está lista, toca el pastel para descubrirla 🎂</div>
+
+      <div class="cake-container">
+        <div class="cake" id="cake" title="Haz clic para activar el regalo">🎂</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Overlay: reproductor + mensaje ===== -->
+  <div class="overlay" id="overlay">
+    <div class="stack">
+      <!-- Card del reproductor -->
+      <div class="glass-card" id="playerCard">
+        <div class="album">
+          <div class="cover" id="cover">
+            <img id="coverImg" src="./images/portada.jpg" alt="Portada" style="width:100%;height:100%;object-fit:cover;display:none"
+                 onload="this.style.display='block'; document.getElementById('coverFallback').style.display='none';"
+                 onerror="this.style.display='none'; document.getElementById('coverFallback').style.display='flex';">
+            <div id="coverFallback" class="cover" style="position:absolute; inset:auto; width:180px;height:180px; display:flex; align-items:center; justify-content:center; font-size:64px; background: rgba(255,255,255,.22); border-radius:16px;">🎂</div>
+          </div>
+          <div class="track-title">Feliz Cumpleaños 🎉</div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+          <span class="time" id="tCurrent">0:00</span>
+          <div class="bar" id="bar">
+            <div class="fill" id="fill"></div>
+            <div class="knob" id="knob" style="left:0%"></div>
+          </div>
+          <span class="time" id="tDuration">0:00</span>
+        </div>
+        
+
+        <!-- Controles (fila) -->
+        <div class="controls-row">
+          <button class="ctrl" id="prevBtn" title="Anterior">⏮</button>
+          <button class="ctrl" id="centerPlay" title="Play/Pausa">⏯</button>
+          <button class="ctrl" id="nextBtn" title="Siguiente">⏭</button>
+        </div>
+
+        <!-- Audio real (oculto) -->
+        <audio id="audio" src="./images/musica.mp3" preload="metadata"></audio>
+
+        <!-- Mensaje glass debajo -->
+        <div class="message" id="messagePanel">
+          <p>
+            🎉✨ Hoy es un día muy especial, un día para celebrar la vida, la amistad y todo lo que has logrado. 🌈  
+            Quiero que sepas que eres una persona muy importante para mí, alguien que valoro y aprecio profundamente 💖🤗.
+          </p>
+          <p>
+            💫 Eres increíble, con un corazón noble 💛 y una sonrisa que ilumina cualquier lugar.  
+            ¡Que este nuevo año venga cargado de salud, amor y muchos sueños cumplidos! 🥳🎁
+          </p>
+        </div>
+      </div>
+
+      <div class="close-row">
+        <button class="close-btn" id="closeOverlay">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
