@@ -28,10 +28,13 @@ html,body{
 .particles{ position:fixed; inset:0; pointer-events:none; }
 
 /* ===== Pantalla de carga ===== */
-.loadingScreen{ position:fixed; inset:0; background:linear-gradient(120deg,#ffedd5,#ffc2d1); z-index:30;}
-.loader-bar{ width:280px; height:8px; border-radius:999px; background:#fff8; margin:14px auto; overflow:hidden}
+.loadingScreen{ position:fixed; inset:0; color:#fff ;z-index:30;}
+.loader-bar{ width:280px; height:8px; border-radius:999px; background:#fff; margin:14px auto; overflow:hidden; color:#fff}
 .loader-progress{ height:100%; width:0; background:#ff7aa2; transition:width .2s }
-.loader-percent{ color:#333; font-weight:600 }
+.loader-percent{ color:#fff; font-weight:600 }
+.loadingScreen h2{
+    color:#fff;
+}
 
 /* ===== Pantalla principal ===== */
 /* ===== Pantalla principal ===== */
@@ -43,7 +46,7 @@ html,body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: url('./images/fondo.jpg') center/cover no-repeat;
+  background: url('./images/fondo1.jpg') center/cover no-repeat;
   overflow: hidden;
 }
 

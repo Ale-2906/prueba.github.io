@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <title>🎉 Sorpresa de Cumpleaños 🎂</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <!-- Confeti -->
   <div class="particles" id="particles"></div>
 
   <!-- PANTALLA DE CARGA -->
-  <div class="loadingScreen centered" id="loadingScreen">
+  <div class="loadingScreen  mainScreen centered" id="loadingScreen">
     <div>
 
     </div>
     <div>
       <h1>🎁 Cargando tu sorpresa de cumpleaños...</h1>
-      <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+      <div class="loader-bar">
+        <div class="loader-progress" id="loaderProgress"></div>
+      </div>
       <div class="loader-percent" id="loaderPercent">0%</div>
       <div class="loader-sub">No cierres, algo bonito está por aparecer ✨</div>
     </div>
@@ -43,12 +47,13 @@
       <div class="glass-card" id="playerCard">
         <div class="album">
           <div class="cover" id="cover">
-            <img id="coverImg" src="./images/portada.jpg" alt="Portada" style="width:100%;height:100%;object-fit:cover;display:none"
-                 onload="this.style.display='block'; document.getElementById('coverFallback').style.display='none';"
-                 onerror="this.style.display='none'; document.getElementById('coverFallback').style.display='flex';">
-            <div id="coverFallback" class="cover" style="position:absolute; inset:auto; width:180px;height:180px; display:flex; align-items:center; justify-content:center; font-size:64px; background: rgba(255,255,255,.22); border-radius:16px;">🎂</div>
+            <img id="coverImg" src="./images/portada.jpg" alt="Portada"
+              style="width:100%;height:100%;object-fit:cover;display:none"
+              onload="this.style.display='block'; document.getElementById('coverFallback').style.display='none';"
+              onerror="this.style.display='none'; document.getElementById('coverFallback').style.display='flex';">
+
           </div>
-          <div class="track-title">Feliz Cumpleaños 🎉</div>
+          <div class="track-title">Feliz Cumpleaños Amor💕🎉</div>
         </div>
 
         <!-- Timeline -->
@@ -60,7 +65,7 @@
           </div>
           <span class="time" id="tDuration">0:00</span>
         </div>
-        
+
 
         <!-- Controles (fila) -->
         <div class="controls-row">
@@ -75,12 +80,29 @@
         <!-- Mensaje glass debajo -->
         <div class="message" id="messagePanel">
           <p>
-            🎉✨ Hoy es un día muy especial, un día para celebrar la vida, la amistad y todo lo que has logrado. 🌈  
-            Quiero que sepas que eres una persona muy importante para mí, alguien que valoro y aprecio profundamente 💖🤗.
+            🎉✨ Hoy es un día muy especial, un día para celebrar el nacimiento de alguien
+            extraordinario en mi vida, alguien que ha llegado a ocupar un lugar importante
+            en mi corazón y a quien valoro profundamente 💖🤗.
           </p>
           <p>
-            💫 Eres increíble, con un corazón noble 💛 y una sonrisa que ilumina cualquier lugar.  
-            ¡Que este nuevo año venga cargado de salud, amor y muchos sueños cumplidos! 🥳🎁
+            Eres una persona increíble que me ha devuelto la confianza y me ha demostrado
+            que no me equivoqué en esa elección. Hoy celebramos un año más de tu vida,
+            y aunque ya estás "viejito", pero eres mi viejito👴🏼.
+            Te deseo que todos tus sueños se hagan realidad que sin importar lo que te depare el futuro, sigue siempre adelante con
+            la frente en alto, y nunca olvides que eres una persona maravillosa con un corazón hermoso.❤️
+          </p>
+          <p>
+            ¡Feliz cumpleaños, amor! 🎂💕 Espero que pases un día maravilloso y que disfrutes
+            mucho tu regalo. Quise preparar algo especial y original para ti, porque te lo mereces.
+            A pesar de la distancia, este día es muy importante para tí y jamás me olvidaría de
+            celebrarte. Gracias por ser paciente conmigo, que cumplas muchos años y Dios bendiga siempre tu camino.🎉✨
+          </p>
+          <img id="coverImg" src="./images/portada2.jpg" alt="Portada"
+              style="width:100%;height:100%;object-fit:cover;display:none"
+              onload="this.style.display='block'; document.getElementById('coverFallback').style.display='none';"
+              onerror="this.style.display='none'; document.getElementById('coverFallback').style.display='flex';">
+          <p>
+            💕❤️TE AMO AMOR ❤️💕
           </p>
         </div>
       </div>
@@ -93,4 +115,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
